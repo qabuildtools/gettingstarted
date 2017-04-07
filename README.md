@@ -24,6 +24,7 @@ Add the qabuild email as a user (read/write required) to GitHub.com, BitBucket.c
 ## Computer
 Personally, we’d recommend using a Mac Mini 2011 or earlier as they allow the memory and hard drive to be upgraded.  If we already have one, start by wiping it and installing macOS.
 
+
 ### macOS Account
 Create a login account for the dedicated QA Build machine of qabuild.  Use the qabuild Apple ID and also setup Mail for the qabuild email address.
 
@@ -69,11 +70,15 @@ Android Studio uses Java to build.  To build from Terminal, we need to select a
 ### Gradle
 Android Studio uses Gradle to build.  It normally uses a wrapper that downloads as needed.  To build from Terminal, it is best to install Gradle locally.  Go to gradle.org to download the required version (usually the latest).
 We create a directory named bin off of the qabuild directory and copy the gradle directory there.  Using the text editor, create .bash_profile with the following:
-# Gradle
-export GRADLE_HOME=/Users/qabuild/bin/gradle-3.3
-export PATH=${PATH}:$GRADLE_HOME/bin
+
+    # Gradle
+    export GRADLE_HOME=/Users/qabuild/bin/gradle-3.3
+    export PATH=${PATH}:$GRADLE_HOME/bin
+    
 Verify that everything is set up correctly by closing any open Terminals, and opening a new Terminal.
-gradle -v
+
+    gradle -v
+    
 Should show the Gradle, Groovy, Ant, JVM and OS versions.
  
 ### Xamarin Studio
